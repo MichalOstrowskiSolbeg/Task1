@@ -5,7 +5,7 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Calculator</h1>
+    <h1 class="display-4;">Calculator</h1>
 </div>
 <div>
     @using (Html.BeginForm("Index", "Home", FormMethod.Post))
@@ -22,13 +22,13 @@
         </div>
         <p class="errors-text">@Html.DisplayFor(result => result.exceptionMessage)</p>
         <div class="form-group">
-            <input asp-action="Calculate" type="submit" value="Add" class="btn btn-primary" name="a" />
+            <input asp-action="Calculate" type="submit" value="Add" class="btn btn-primary" name="task" />
 
-            <input asp-action="Calculate" type="submit" value="Subtract" class="btn btn-primary" name="a" />
+            <input asp-action="Calculate" type="submit" value="Subtract" class="btn btn-primary" name="task" />
 
-            <input asp-action="Calculate" type="submit" value="Multiply" class="btn btn-primary" name="a" />
+            <input asp-action="Calculate" type="submit" value="Multiply" class="btn btn-primary" name="task" />
 
-            <input asp-action="Calculate" type="submit" value="Divide" class="btn btn-primary" name="a" />
+            <input asp-action="Calculate" type="submit" value="Divide" class="btn btn-primary" name="task" />
         </div>
         <div>
             <label for="result">Result</label>

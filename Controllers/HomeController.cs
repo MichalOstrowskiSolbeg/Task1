@@ -13,12 +13,10 @@ namespace Task1_Calculator.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
         private readonly IMath _math;
 
-        public HomeController(ILogger<HomeController> logger, IMath math)
+        public HomeController(IMath math)
         {
-            _logger = logger;
             _math = math;
         }
 
@@ -28,11 +26,11 @@ namespace Task1_Calculator.Controllers
         }
 
         [HttpPost]
-        public IActionResult Calculate(MathModel model, string a)
+        public IActionResult Calculate(MathModel model, string task)
         {
             model.exceptionMessage = "";
 
-            switch (a)
+            switch (task)
             {
                 case "Add":
                     model.result = _math.Add(model.value1, model.value2);
